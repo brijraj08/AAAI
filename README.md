@@ -14,11 +14,11 @@ theano --> 1.0.3  or newer. GPU support should be installed.
 1m-movielense dataset 
 Goodreads-book dataset
 lastfm dataset
-Amazon dataset
+Amazon dataset (it is a multicategory Amazon behavioral data)
 
-## Content driven session creation using our proposed method
+## Content-driven session creation using our proposed method
 
-To replicate our CD-Sessions dataset, first download the dataset from the given [link] (https://drive.google.com/file/d/1AFQhzUyn4xExIJXakWe-eA-f07n7DDwk/view?usp=sharing) and place it into the respective dataset folder. Then, run the scripts below in the specified order.
+To replicate our CD-Sessions dataset, first, download the dataset from the given [link] (https://drive.google.com/file/d/1AFQhzUyn4xExIJXakWe-eA-f07n7DDwk/view?usp=sharing) and place it into the respective dataset folder. Then, run the scripts below in the specified order.
 
 For 1M-MovieLens dataset and Goodreads-books dataset, the following steps are involved:-
 1.embedding_creation.py: This notebook contains a script that generates the embedding.
