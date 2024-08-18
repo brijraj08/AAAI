@@ -1,10 +1,13 @@
-"Ready for You When You are Back: Content-driven Session-based Recommendation for Continuity of Experience"
+# "Ready for You When You are Back: Content-driven Session-based Recommendation for Continuity of Experience"
+
 This is our implementation for the paper:
-<img src="./insight.png" class="img-responsive" alt="" width="500"> 
+
+<img src="./insight.png" class="img-responsive" alt="" width="500"></div> 
 <figcaption> Fig.1: Here is the basic insight when time-driven sessions fail in capturing the patterns and Content-driven succeeds</div> </figcaption>
 
-<img src="./HomogeneousArch.png" class="img-responsive" alt="" width="500"> 
+<img src="./HomogeneousArch.png" class="img-responsive" alt="" width="500"></div> 
 <figcaption> Fig.2: Process of Homogeneous Session Creation </div> </figcaption>
+
 ## Requirements
 python --> Use python 3.6.0 or newer.Python 2 is NOT supported.
 numpy --> 1.15.1 or newer.
@@ -57,7 +60,7 @@ for Amazon_dataset, the following steps are involved.
 ## Model Execution
 We have leveraged our proposed Content-driven Sessions in the "Neural Attentive Recommendation Machine" model.
 
-##Notebooks and Helper Scripts
+## Notebooks and Helper Scripts
 
 1.example_preprocess.py: This notebook contains a script that can be used to create train and test data. we have used four example_preprocess.py (for example:ml_example_preprocess.py) for each dataset.
 
