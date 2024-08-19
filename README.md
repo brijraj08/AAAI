@@ -14,18 +14,27 @@ numpy --> 1.15.1 or newer.
 pandas --> 0.25.3 or newer.
 CUDA --> Needed for the GPU support of Theano. It works fine with version 11.1.1.
 libgpuarray --> Required for the GPU support of Theano, use the latest version.
-theano --> 1.0.3  or newer. GPU support should be installed.
+theano --> 1.0.3  or newer. GPU support should be installed.  
+or  Follow the execution instructions given at the corresponding model's page.
 
-## Four Datasets used in this repo:-
+## Datasets Used:-
 
-1m-movielense dataset 
-Goodreads-book dataset
-lastfm dataset
-Amazon dataset (it is a multicategory Amazon behavioral data)
+* 1m-movielense dataset   
+* Goodreads-book dataset  
+* lastfm dataset  
+* Amazon dataset (it is a multicategory Amazon behavioral data)  
 
-## Content-driven session creation using our proposed method
+## Model Execution
+We have leveraged our proposed Content-driven Sessions in the following models:  
+* NARM:  https://github.com/lijingsdu/sessionRec_NARM  
+* STAMP: https://github.com/uestcnlp/STAMP  
+* HRNN: https://github.com/mquad/sars_tutorial/  
+* Gru4Rec: https://github.com/hidasib/GRU4Rec  
+* Tr4Rec: https://github.com/NVIDIA-Merlin/Transformers4Rec  
 
-To replicate our CD-Sessions dataset, first, download the dataset from the given [link] (https://drive.google.com/file/d/1AFQhzUyn4xExIJXakWe-eA-f07n7DDwk/view?usp=sharing) and place it into the respective dataset folder. Then, run the scripts below in the specified order.
+## Content-driven Session Creation using Proposed Method
+
+To replicate our CD-Sessions creation, first, download the dataset from the given link (https://drive.google.com/file/d/1AFQhzUyn4xExIJXakWe-eA-f07n7DDwk/view?usp=sharing) and place it into the respective dataset folder (as stated for model's execution). Then, run the scripts below in the specified order.
 
 For 1M-MovieLens dataset and Goodreads-books dataset, the following steps are involved:-
 1.embedding_creation.py: This notebook contains a script that generates the embedding.
@@ -43,22 +52,29 @@ For 1M-MovieLens dataset and Goodreads-books dataset, the following steps are in
 	Output file:CDsess_data.csv
 
 for lastfm_dataset, the following steps are involved.
-1.pipeline_genre.py: This notebook used to generate genre for tracks.
+### 1.pipeline_genre.py: 
+	This notebook used to generate genre for tracks.
 	Inputfile:uniqueArtistandtrack.csv, after generating genre, we got the file unique_genres_with_clusterid.csv.
 	outputfile:data_withclusterid.csv
 
-2.CD_session_creation.py: This notebook contains a script that generates content-driven sessions.
+### 2.CD_session_creation.py: 
+	This notebook contains a script that generates content-driven sessions.
 	Input file: data_withclusterid.csv
 	Output file:CDsess_data.csv
 
 for Amazon_dataset, the following steps are involved.
 
-1.CD_session_creation.py: This notebook contains a script that generates content-driven sessions.
+### 1.CD_session_creation.py: 
+	This notebook contains a script that generates content-driven sessions.
 	Input file: data_withclusterid.csv
 	Output file:CDsess_data.csv
 
-## Model Execution
-We have leveraged our proposed Content-driven Sessions in the "Neural Attentive Recommendation Machine" model.
+
+### Experimental Steps:
+1. Please set up the environment for executing the particular model.
+2. Get the dataset of your choice (our download from drive link)
+3. Create Content Driven session using CD_session_creation.py
+4. Place the session file created through step-3 and execute the model following their original way of execution (on corresponding Github)
 
 ## Notebooks and Helper Scripts
 
